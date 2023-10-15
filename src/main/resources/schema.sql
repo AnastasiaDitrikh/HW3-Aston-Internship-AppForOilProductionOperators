@@ -14,6 +14,7 @@ CREATE TABLE IF NOT EXISTS location
 
 CREATE TABLE IF NOT EXISTS well_clusters(
    id                BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY UNIQUE,
+   number            INT NOT NULL,
    location_id       BIGINT    NOT NULL,
    operator_id       BIGINT                      NOT NULL,
    CONSTRAINT fk_well_cluster_to_operator FOREIGN KEY (operator_id) REFERENCES operators (id),

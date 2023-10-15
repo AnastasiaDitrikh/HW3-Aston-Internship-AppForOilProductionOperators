@@ -8,7 +8,15 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class WellCluster {
-    private long idCluster;
+    private Long id;
+
+    private int number;
     private Location locality;
     private Operator operator;
+
+    public WellCluster(Location locality, Operator operator, int number) {
+        this.locality = locality;
+        this.operator = operator;
+        this.number = number;
+    }
 }

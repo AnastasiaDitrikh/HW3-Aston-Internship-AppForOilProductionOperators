@@ -1,6 +1,10 @@
 package repository;
 
- public interface WellClusterDao {
+import model.WellCluster;
+
+public interface WellClusterDao {
 
     boolean delete(Long id);
+
+    WellCluster save(WellCluster wellCluster);
 }

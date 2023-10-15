@@ -80,5 +80,4 @@ public final class ConnectionManager {
             throw new ConnectionDoesNotExistException("Соединение не установлено");
         }
     }
-
 }
