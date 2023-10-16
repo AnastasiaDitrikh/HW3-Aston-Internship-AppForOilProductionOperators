@@ -12,7 +12,7 @@ import java.sql.Statement;
 public class WellClusterDaoImpl implements WellClusterDao {
     private static final WellClusterDao wellClusterDao = new WellClusterDaoImpl();
     private static final String DELETE_BY_ID = "DELETE FROM well_clusters WHERE id=?";
-    public static final String SAVE = "INSERT INTO well_clusters(location_id, operator_id, number) VALUES (?,?,?)";
+    private static final String SAVE = "INSERT INTO well_clusters(location_id, operator_id, number) VALUES (?,?,?)";
 
     private WellClusterDaoImpl() {
 

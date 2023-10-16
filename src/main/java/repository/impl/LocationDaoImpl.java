@@ -12,7 +12,7 @@ import java.sql.Statement;
 public class LocationDaoImpl implements LocationDao {
     private static final LocationDao locationDao = new LocationDaoImpl();
     private final String DELETE_BY_ID = "DELETE FROM location WHERE id=?";
-    public static final String SAVE = "INSERT INTO location (lat, lon) VALUES (?,?)";
+    private static final String SAVE = "INSERT INTO location (lat, lon) VALUES (?,?)";
 
     private LocationDaoImpl() {
 

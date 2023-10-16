@@ -12,7 +12,7 @@ import java.sql.Statement;
 public class WellDaoImpl implements WellDao {
     private static final WellDao wellDao = new WellDaoImpl();
     private static final String DELETE_BY_ID = "DELETE FROM wells WHERE id=?";
-    public static final String SAVE = "INSERT INTO wells(equipment, productivity, well_cluster_id) VALUES (?,?,?)";
+    private static final String SAVE = "INSERT INTO wells(equipment, productivity, well_cluster_id) VALUES (?,?,?)";
 
     private WellDaoImpl() {
 

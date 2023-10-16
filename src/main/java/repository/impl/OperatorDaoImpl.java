@@ -19,8 +19,8 @@ public class OperatorDaoImpl implements OperatorDao {
     private static final String DELETE_BY_ID = "DELETE FROM operators WHERE id=?";
     private static final String SAVE_OPERATOR = "INSERT INTO operators(name, surname) VALUES (?,?)";
     private static final String UPDATE_OPERATOR = "UPDATE operators SET name = ?, surname = ? WHERE id = ?";
-    public static final String FIND_ALL = "SELECT id, name, surname FROM operators";
-    public static final String GET_BY_ID = FIND_ALL + " WHERE id = ?";
+    private static final String FIND_ALL = "SELECT id, name, surname FROM operators";
+    private static final String GET_BY_ID = FIND_ALL + " WHERE id = ?";
 
     private OperatorDaoImpl() {
 
