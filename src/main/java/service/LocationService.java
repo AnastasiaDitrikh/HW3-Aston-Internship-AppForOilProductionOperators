@@ -4,6 +4,9 @@ import model.Location;
 import repository.LocationDao;
 import repository.impl.LocationDaoImpl;
 
+import java.util.List;
+import java.util.Optional;
+
 public class LocationService {
     private static final LocationService locationService = new LocationService();
 
@@ -23,5 +26,17 @@ public class LocationService {
 
     public boolean delete(Long id) {
         return locationDao.delete(id);
+    }
+
+    public Optional<Location> getById(Long id) {
+        return locationDao.getById(id);
+    }
+
+    public void update(Location location) {
+        locationDao.update(location);
+    }
+
+    public List<Location> findAll() {
+        return locationDao.findAll();
     }
 }

@@ -1,6 +1,9 @@
 package model;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 @Data
@@ -10,13 +13,13 @@ import lombok.*;
 public class WellCluster {
     private Long id;
 
-    private int number;
-    private Location locality;
-    private Operator operator;
+    private Long number;
+    private Long locationId;
+    private Long operatorId;
 
-    public WellCluster(Location locality, Operator operator, int number) {
-        this.locality = locality;
-        this.operator = operator;
+    public WellCluster(Long number, Long locationId, Long operatorId) {
         this.number = number;
+        this.locationId = locationId;
+        this.operatorId = operatorId;
     }
 }

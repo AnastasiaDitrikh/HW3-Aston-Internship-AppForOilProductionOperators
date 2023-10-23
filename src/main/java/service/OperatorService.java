@@ -35,7 +35,8 @@ public class OperatorService {
     public boolean delete(Long id) {
         return operatorDao.delete(id);
     }
-    public List<Operator> findAll(){
+
+    public List<Operator> findAll() {
         return operatorDao.findAll();
     }
 }

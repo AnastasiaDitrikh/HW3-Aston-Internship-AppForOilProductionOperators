@@ -1,6 +1,9 @@
 package model;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
@@ -8,13 +11,13 @@ import lombok.*;
 @Builder
 public class Well {
     private Long id;
-    private  String equipment;
+    private String equipment;
     private double productivity;
-    private WellCluster wellCluster;
+    private Long wellClusterId;
 
-    public Well(String equipment, double productivity, WellCluster wellCluster) {
+    public Well(String equipment, double productivity, Long wellClusterId) {
         this.equipment = equipment;
         this.productivity = productivity;
-        this.wellCluster = wellCluster;
+        this.wellClusterId = wellClusterId;
     }
 }

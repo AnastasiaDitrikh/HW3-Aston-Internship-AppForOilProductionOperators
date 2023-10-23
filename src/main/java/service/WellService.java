@@ -4,6 +4,9 @@ import model.Well;
 import repository.WellDao;
 import repository.impl.WellDaoImpl;
 
+import java.util.List;
+import java.util.Optional;
+
 public class WellService {
     private static final WellService wellService = new WellService();
 
@@ -23,5 +26,17 @@ public class WellService {
 
     public boolean delete(Long id) {
         return wellDao.delete(id);
+    }
+
+    public Optional<Well> getById(Long id) {
+        return wellDao.getById(id);
+    }
+
+    public void update(Well well) {
+        wellDao.update(well);
+    }
+
+    public List<Well> findAll() {
+        return wellDao.findAll();
     }
 }
